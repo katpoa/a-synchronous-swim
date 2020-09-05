@@ -4,8 +4,8 @@
 
   //
   // TODO: build the swim command fetcher here
-  const fetchAjaxCommand = () {
-    $.ajax({
+  // const fetchAjaxCommand = () {
+  setInterval($.ajax({
       type: 'GET',
       url: serverUrl,
       cache: false,
@@ -18,12 +18,12 @@
         console.error('FAILED!');
       }
 
-    });
-  };
+    }), 1000);
+  // };
 
 
 
-  setInterval(fetchAjaxCommand(()), 1000);
+  //setInterval(fetchAjaxCommand(()), 1000);
 
 
   /////////////////////////////////////////////////////////////////////
